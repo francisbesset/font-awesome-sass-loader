@@ -22,7 +22,7 @@
     "style-loader": "*"
   },
   "peerDependencies": {
-    "font-awesome": "~4.4.0"
+    "font-awesome": "~4"
   },
   "repository": {
     "type": "git",
