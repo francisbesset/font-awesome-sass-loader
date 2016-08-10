@@ -1,1 +1,1 @@
-require("style!css!sass!./font-awesome-sass-styles!./font-awesome-sass.config.js");
+require("style!css!sass!./font-awesome-sass-styles.loader!./font-awesome-sass.config.js");
