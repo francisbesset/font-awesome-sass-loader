@@ -2,7 +2,7 @@
   "name": "font-awesome-sass-loader",
   "description": "font-awesome (sass) package for webpack",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "loader": "index.loader.js",
   "keywords": [
