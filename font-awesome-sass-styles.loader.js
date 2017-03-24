@@ -1,16 +1,16 @@
 var styles = [
   'mixins',
 
-  'bordered-pulled',
-  'core',
-  'fixed-width',
-  'icons',
-  'larger',
-  'list',
   'path',
-  'rotated-flipped',
+  'core',
+  'larger',
+  'fixed-width',
+  'list',
+  'bordered-pulled',
   'animated',
-  'stacked'
+  'rotated-flipped',
+  'stacked',
+  'icons',
 ];
 
 module.exports = function (content) {

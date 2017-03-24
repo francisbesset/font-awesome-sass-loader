@@ -13,15 +13,15 @@ module.exports = {
   styles: {
     "mixins": true,
 
-    "bordered-pulled": true,
-    "core": true,
-    "fixed-width": true,
-    "icons": true,
-    "larger": true,
-    "list": true,
     "path": true,
-    "rotated-flipped": true,
+    "core": true,
+    "larger": true,
+    "fixed-width": true,
+    "list": true,
+    "bordered-pulled": true,
     "animated": true,
-    "stacked": true
-  }
+    "rotated-flipped": true,
+    "stacked": true,
+    "icons": true,
+  },
 };
