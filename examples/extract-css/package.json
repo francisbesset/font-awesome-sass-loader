@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf public/",
+    "dev": "webpack -d",
+    "dist": "webpack -p"
+  },
+  "dependencies": {
+    "css-loader": "*",
+    "style-loader": "*",
+    "extract-text-webpack-plugin": "^1",
+    "file-loader": "*",
+    "font-awesome": "^4.6.0",
+    "font-awesome-sass-loader": "^1.0",
+    "node-gyp": "*",
+    "node-sass": "*",
+    "sass-loader": "*",
+    "url-loader": "*",
+    "webpack": "^1"
+  }
+}
