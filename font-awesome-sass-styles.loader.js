@@ -11,6 +11,7 @@ var styles = [
   'rotated-flipped',
   'stacked',
   'icons',
+  'screen-reader',
 ];
 
 module.exports = function (content) {

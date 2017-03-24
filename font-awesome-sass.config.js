@@ -23,5 +23,6 @@ module.exports = {
     "rotated-flipped": true,
     "stacked": true,
     "icons": true,
+    "screen-reader": true,
   },
 };
