@@ -5,11 +5,11 @@ Font Awesome configuration and loading package for webpack, using font-awesome (
 
 Based on [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) by [Gowrav Shekar](https://github.com/gowravshekar) ([@gowravshekar](https://www.npmjs.com/~gowravshekar)) and [bootstrap-sass-loader](https://github.com/shakacode/bootstrap-sass-loader/) by [Shaka Code](https://github.com/shakacode) ([@justin808](https://www.npmjs.com/~justin808)).
 
-Version 1!
+Version 2!
 ----------
 
-The version 1 of font-awesome-sass-loader is only compatible with webpack v1.
-If you want to use another version of webpack, please check the [master branch](https://github.com/francisbesset/font-awesome-sass-loader).
+The version 2 of font-awesome-sass-loader is only compatible with webpack v2.
+If you use the version 1 of webpack, please check the [v1 branch](https://github.com/francisbesset/font-awesome-sass-loader/tree/v1).
 
 Usage
 -----
@@ -19,11 +19,22 @@ To properly load font-awesome fonts, you need to configure loaders in your `webp
 ``` javascript
 module.exports = {
   module: {
-    loaders: [
+    rules: [
       // the url-loader uses DataUrls.
       // the file-loader emits files.
-      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        options: {
+          limit: 10000,
+          mimetype: 'application/font-woff'
+        }
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [
+          { loader: 'file-loader' }
+        ]
+      }
     ]
   }
 };
@@ -106,13 +117,13 @@ $fa-border-color: #ddd;
 
 ### extract-text-webpack-plugin
 
-Configure style loader in `font-awesome-sass.config.js`.
+Configure extractStyles in `font-awesome-sass.config.js`.
 
 Example:
 
 ``` javascript
 module.exports = {
-  styleLoader: require("extract-text-webpack-plugin").extract("style-loader", "css-loader!sass-loader"),
+  extractStyles: true,
 
   styles: {
     ...
@@ -121,3 +132,13 @@ module.exports = {
 ```
 
 Install `extract-text-webpack-plugin` before using this configuration.
+
+### Custom style loaders
+
+Example:
+
+``` javascript
+module.exports = {
+  styleLoaders: ["style-loader", "css-loader", "sass-loader"],
+};
+```

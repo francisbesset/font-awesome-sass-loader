@@ -1,21 +1,42 @@
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    'font-awesome': 'font-awesome-sass!./font-awesome.config.js',
+    'font-awesome': 'font-awesome-sass-loader!./font-awesome.config.js',
   },
   output: {
-    path: './public/assets',
+    path: path.resolve(__dirname, 'public', 'assets'),
     publicPath: '/assets/',
     filename: '[name].js',
   },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: '[name].css',
+      disable: false,
+      allChunks: true,
+    }),
+  ],
   module: {
-    loaders: [
-      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader' },
+    rules: [
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              mimetype: 'application/font-woff',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [
+          { loader: 'file-loader' },
+        ],
+      },
     ],
   },
-  plugins: [
-    new ExtractTextPlugin("[name].css"),
-  ],
 };

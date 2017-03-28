@@ -8,7 +8,7 @@
   "dependencies": {
     "css-loader": "*",
     "style-loader": "*",
-    "extract-text-webpack-plugin": "^1",
+    "extract-text-webpack-plugin": "^2",
     "file-loader": "*",
     "font-awesome": "^4.6.0",
     "font-awesome-sass-loader": "^1.0",
@@ -16,6 +16,6 @@
     "node-sass": "*",
     "sass-loader": "*",
     "url-loader": "*",
-    "webpack": "^1"
+    "webpack": "^2"
   }
 }

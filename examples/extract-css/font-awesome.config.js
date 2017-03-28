@@ -1,5 +1,5 @@
 module.exports = {
-  styleLoader: require('extract-text-webpack-plugin').extract('style-loader', 'css-loader!sass-loader'),
+  extractStyles: true,
 
   styles: {
     "mixins": true,
