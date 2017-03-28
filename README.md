@@ -5,6 +5,12 @@ Font Awesome configuration and loading package for webpack, using font-awesome (
 
 Based on [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) by [Gowrav Shekar](https://github.com/gowravshekar) ([@gowravshekar](https://www.npmjs.com/~gowravshekar)) and [bootstrap-sass-loader](https://github.com/shakacode/bootstrap-sass-loader/) by [Shaka Code](https://github.com/shakacode) ([@justin808](https://www.npmjs.com/~justin808)).
 
+Version 1!
+----------
+
+The version 1 of font-awesome-sass-loader is only compatible with webpack v1.
+If you want to use another version of webpack, please check the [master branch](https://github.com/francisbesset/font-awesome-sass-loader).
+
 Usage
 -----
 
