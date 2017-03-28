@@ -3,7 +3,7 @@ font-awesome-sass-loader
 
 Font Awesome configuration and loading package for webpack, using font-awesome (Sass).
 
-Based on [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) by [Gowrav Shekar](https://github.com/gowravshekar) ([@gowravshekar](https://www.npmjs.com/~gowravshekar)) and [bootstrap-sass-loader](https://github.com/shakacode/bootstrap-sass-loader/) by [Shaka Code](https://github.com/shakacode) ([@justin808](https://www.npmjs.com/~justin808).
+Based on [font-awesome-webpack](https://github.com/gowravshekar/font-awesome-webpack) by [Gowrav Shekar](https://github.com/gowravshekar) ([@gowravshekar](https://www.npmjs.com/~gowravshekar)) and [bootstrap-sass-loader](https://github.com/shakacode/bootstrap-sass-loader/) by [Shaka Code](https://github.com/shakacode) ([@justin808](https://www.npmjs.com/~justin808)).
 
 Usage
 -----
@@ -70,11 +70,17 @@ module.exports = {
   styles: {
     "mixins": true,
 
-    "core": true,
-    "icons": true,
-
-    "larger": true,
     "path": true,
+    "core": true,
+    "larger": true,
+    "fixed-width": true,
+    "list": true,
+    "bordered-pulled": true,
+    "animated": true,
+    "rotated-flipped": true,
+    "stacked": true,
+    "icons": true,
+    "screen-reader": true,
   }
 };
 ```
@@ -87,7 +93,7 @@ You may customize Font-Awesome here.
 
 Example:
 
-``` sass
+``` scss
 $fa-inverse: #eee;
 $fa-border-color: #ddd;
 ```
