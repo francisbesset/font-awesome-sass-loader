@@ -11,7 +11,7 @@
     "extract-text-webpack-plugin": "^2",
     "file-loader": "*",
     "font-awesome": "^4.6.0",
-    "font-awesome-sass-loader": "^1.0",
+    "font-awesome-sass-loader": "^2.0",
     "node-gyp": "*",
     "node-sass": "*",
     "sass-loader": "*",
